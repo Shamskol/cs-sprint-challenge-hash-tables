@@ -3,6 +3,22 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    #Set up the hash table for tracking counts
+      # whereby key: number, value: count
+    ht = {} 
+
+    # Set up intersections list
+    result = [] 
+
+    # Iterate through the arrays of arrays
+    for arr in arrays:
+        for num in arr:
+            if num not in ht:
+                ht[num] = 1
+            else:
+                ht[num] += 1 
+                if ht[num] == len(arrays):
+                    result.append(num)    
 
     return result
 

@@ -9,6 +9,20 @@ def reconstruct_trip(tickets, length):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    
+    # Set up tickets hash table
+    loc = {}
+    route = [None] * length
+
+    # Iterate through the tickets
+    for ticket in tickets:
+        loc[ticket.source] = ticket.destination
+    #Set up route list
+    # Initialize with the first location
+    next = loc["NONE"]
+    
+    for i in range(0, length):
+        route[i] = next
+        next = loc[next]
 
     return route
