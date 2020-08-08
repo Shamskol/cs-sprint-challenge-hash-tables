@@ -16,6 +16,7 @@ def reconstruct_trip(tickets, length):
 
     # Iterate through the tickets
     for ticket in tickets:
+    # Set the source as the KEY and destination as the VALUE    
         loc[ticket.source] = ticket.destination
     #Set up route list
     # Initialize with the first location
